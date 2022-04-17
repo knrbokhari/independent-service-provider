@@ -4,6 +4,7 @@
     padding: 40px 30px;
     border: 1px solid #ffffff;
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 label{
     font-size: 20px;
@@ -17,7 +18,7 @@ input{
     background-color: transparent;
     color: #0051ff;
     border: none;
-    font-size: 18px;
+    /* font-size: 18px; */
     margin-top: 15px;
 }
 .line{

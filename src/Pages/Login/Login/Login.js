@@ -1,5 +1,6 @@
 import React from "react";
 import { Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import SocialMediaLogin from "../../Shared/SocialMediaLogin/SocialMediaLogin";
 import "./Login.css";
 
@@ -23,11 +24,17 @@ const Login = () => {
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
+          <p className="my-2 fs-4 text-white">
+            Don't have an account?{" "}
+            <Link to="/registration" className="text-decoration-none">
+              Create New Account
+            </Link>{" "}
+          </p>
           <button type="submit" className="btns buttons mt-2  w-100">
             Log in
           </button>
         </Form>
-        <button className="forgot-pass">Forgotten password?</button>
+        <button className="forgot-pass fs-4">Forgotten password?</button>
         <div className="d-flex align-items-center">
           <div className="line"></div>
           <div className="or text-white">OR</div>
