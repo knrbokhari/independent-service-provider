@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect className="" expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand>
+        <Navbar.Brand style={{ padding: "15px 0" }}>
           <CustomLink to="/">
             <img src="https://technext.github.io/gymlife/img/logo.png" alt="" />
           </CustomLink>

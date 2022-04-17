@@ -1,0 +1,64 @@
+strong{
+    color: #f36100;
+}
+.banner p{
+    font-size: 20px;
+    margin: 0;
+}
+.banner h3{
+    font-size: 35px;
+}
+.banner-button{
+    background-color: #f36100;
+    font-size: 16px;
+    padding: 5px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 3px solid #f36100;
+    font-weight: 600;
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.banner-button:hover{
+    color: #f36100;
+    background-color: #ffffff;
+}
+
+
+@media (min-width: 768px) {
+    .banner p{
+        text-align: left;
+    }
+    .banner h3{
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 10px;
+    }
+    .banner-button{
+        margin: 0;
+        margin-bottom: 40px;
+        width: 180px;
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+@media (min-width: 992px){
+    .banner h3{
+        font-size: 55px;
+    margin-bottom: 20px;
+    }
+    .banner-button{
+        margin-bottom: 80px;
+    }
+}
+@media (min-width: 1300px){
+    .banner h3{
+        font-size: 65px;
+    }
+    .banner-button{
+        margin-bottom: 180px;
+    }
+}
