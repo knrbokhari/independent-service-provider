@@ -2,59 +2,46 @@ strong{
     color: #f36100;
 }
 .banner p{
-    font-size: 20px;
+    font-size: 25px;
     margin: 0;
 }
 .banner h3{
     font-size: 35px;
 }
 .banner-button{
-    background-color: #f36100;
-    font-size: 16px;
-    padding: 5px 20px;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 10px;
-    border: 3px solid #f36100;
-    font-weight: 600;
-    display: block;
-    width: 120px;
-    margin: 0 auto;
-    margin-bottom: 15px;
+    margin: 5px 0 15px 0;
 }
-.banner-button:hover{
-    color: #f36100;
-    background-color: #ffffff;
-}
-
 
 @media (min-width: 768px) {
     .banner p{
-        text-align: left;
+        font-size: 35px;
     }
     .banner h3{
     font-size: 50px;
-    text-align: left;
     margin-bottom: 10px;
     }
     .banner-button{
         margin: 0;
         margin-bottom: 40px;
-        width: 180px;
-        padding: 10px;
-        font-size: 20px;
+
     }
 }
 @media (min-width: 992px){
+    .banner p{
+        font-size: 40px;
+    }
     .banner h3{
         font-size: 55px;
-    margin-bottom: 20px;
+        margin-bottom: 20px;
     }
     .banner-button{
         margin-bottom: 80px;
     }
 }
 @media (min-width: 1300px){
+    .banner p{
+        font-size: 45px;
+    }
     .banner h3{
         font-size: 65px;
     }

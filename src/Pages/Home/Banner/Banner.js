@@ -17,7 +17,7 @@ const Banner = () => {
             <h3>
               Gym<strong> Trainer </strong>
             </h3>
-            <Link to="/sarvices" className="banner-button">
+            <Link to="/sarvices" className="btns buttons banner-button">
               Sarvices
             </Link>
           </Carousel.Caption>
@@ -29,7 +29,7 @@ const Banner = () => {
             <h3>
               Be <strong>strong</strong> <br /> traning hard
             </h3>
-            <Link to="/sarvices" className="banner-button">
+            <Link to="/sarvices" className="btns buttons banner-button">
               Sarvices
             </Link>
           </Carousel.Caption>
@@ -41,7 +41,7 @@ const Banner = () => {
             <h3>
               PUSH YOUR <br /> <strong>LIMITS</strong> FORWARD
             </h3>
-            <Link to="/sarvices" className="banner-button">
+            <Link to="/sarvices" className="btns buttons banner-button">
               Sarvices
             </Link>
           </Carousel.Caption>

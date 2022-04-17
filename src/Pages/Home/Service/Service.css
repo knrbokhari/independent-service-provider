@@ -1,0 +1,81 @@
+.cards{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transform: skewY(-4deg);
+    text-align: center;
+    background-color: #2d2d2d;
+    padding: 40px 30px 52px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+.cards:hover {
+    background-color: #ffffff;
+    color: black;
+}
+.cards:hover p{
+    color: rgb(41, 41, 41);
+}
+.List-group{
+    border-top: inherit;
+    border-bottom: inherit;
+}
+.cards:hover .List-group{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.mt-50px{
+    margin-top: 50px!important;
+}
+.card-body{
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}
+.card-body ,.list-group-flush{
+    transform: skewY(4deg);
+}
+
+.List-group p{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: #969696;
+}
+.card-info{
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.card-body{
+    padding: 6px 25px;
+}
+
+.price{
+    font-size: 35px!important;
+    font-weight: 600;
+    color: #f36100!important;
+    margin-bottom: 15px!important;
+}
+
+.btns{
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 6px 20px;
+    font-size: 20px;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.buttons{
+    color: #f36100;
+    border-color: #f36100;
+}
+.buttons:hover{
+    color: #ffffff;
+    background-color: #f36100;
+}

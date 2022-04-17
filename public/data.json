@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "name": "Starter",
+        "duration": "3 Month unlimited",
+        "image": "https://technext.github.io/gymlife/img/classes/class-4.jpg",
+        "price": 39.9,
+        "clients": "1 client",
+        "access": "Unlimited access to the gym",
+        "classes": "2 classes per week",
+        "description": "Individual personal trainers and coaches starting their remote training business."
+    },
+    {
+        "id": 2,
+        "name": "Pro",
+        "duration": "6 Month unlimited",
+        "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "price": 79.9,
+        "clients": "Train up to 5 clients",
+        "access": "Unlimited access to the gym",
+        "classes": "4 classes per week",
+        "description": "Individual or small teams of fitness professionals looking to build their brand and deliver high training"
+    },
+    {
+        "id": 3,
+        "name": "PREMIUM",
+        "duration": "12 Month unlimited",
+        "image": "https://technext.github.io/gymlife/img/classes/class-4.jpg",
+        "price": 129.9,
+        "clients": "Train up to 10 clients",
+        "access": "Unlimited access to the gym",
+        "classes": "6 classes per week",
+        "description": "Athletic clubs or multi-location gyms ready to scale up online coaching and elevate member engagement."
+    }
+]
