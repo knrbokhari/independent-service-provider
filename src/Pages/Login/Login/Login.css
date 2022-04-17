@@ -1,0 +1,30 @@
+.form{
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+label{
+    font-size: 20px;
+    color: #ffffff;
+}
+input{
+    font-size: 20px!important;
+}
+.forgot-pass{
+    padding: 0;
+    background-color: transparent;
+    color: #0051ff;
+    border: none;
+    font-size: 18px;
+    margin-top: 15px;
+}
+.line{
+    width: 50%;
+    border-top: 1px solid #ffffff;
+}
+.or{
+    font-size: 20px;
+    margin: 0 15px;
+}
