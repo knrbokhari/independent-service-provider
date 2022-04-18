@@ -4,9 +4,11 @@ import {
 } from "firebase/auth";
 import React, { useRef, useState } from "react";
 import { Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialMediaLogin from "../../Shared/SocialMediaLogin/SocialMediaLogin";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Registration = () => {
   const emailRef = useRef("");
@@ -14,10 +16,12 @@ const Registration = () => {
   const confirmPasswordRef = useRef("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const verifiEmail = async () => {
     await sendEmailVerification(auth.currentUser);
-    alert("Verification email sent");
+    toast("Verification email sent");
   };
 
   const handleRegistration = async (e) => {
@@ -38,7 +42,7 @@ const Registration = () => {
       .then((result) => {
         const user = result.user;
         if (user) {
-          navigate("/");
+          navigate(from, { replace: true });
         }
         // console.log(user);
         verifiEmail();
@@ -104,6 +108,7 @@ const Registration = () => {
           <div className="line"></div>
         </div>
         <SocialMediaLogin></SocialMediaLogin>
+        <ToastContainer />
       </div>
     </div>
   );
