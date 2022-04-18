@@ -9,25 +9,24 @@ import Loading from "../Shared/Loading/Loading";
 
 const Checkout = () => {
   const [user] = useAuthState(auth);
-  const [updateProfile, updating, error] = useUpdateProfile(auth);
+  // const [updateProfile, updating, error] = useUpdateProfile(auth);
   const displayNameRef = useRef("");
   const addressRef = useRef("");
   const phoneNumberRef = useRef("");
 
-  if (updating) {
-    return <Loading></Loading>;
-  }
+  // if (updating) {
+  //   return <Loading></Loading>;
+  // }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    toast("Thank you for the booking");
 
-    const displayName = displayNameRef.current.value;
+    // const displayName = displayNameRef.current.value;
     // const address = addressRef.current.value;
     // const phoneNumber = phoneNumberRef.current.value;
 
-    await updateProfile({ displayName });
-    console.log(user);
-    toast("Thank you for the booking");
+    // await updateProfile();
   };
   return (
     <div className="container">
@@ -68,7 +67,7 @@ const Checkout = () => {
               required
             />
           </Form.Group>
-          <p className="text-danger text-center fs-5">{error?.message}</p>
+          {/* <p className="text-danger text-center fs-5">{error?.message}</p> */}
           <button type="submit" className="btns buttons mt-2  w-100">
             submit
           </button>

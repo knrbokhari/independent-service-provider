@@ -21,7 +21,7 @@ const Service = (props) => {
           <h2 className="card-tital" style={{ fontSize: "30px" }}>
             {name}
           </h2>
-          {/* <img src={image} alt="" width="100%" /> */}
+          <img src={image} alt="" width="100%" className="my-4" />
           <p className="card-info">{description}</p>
         </div>
         <div className="list-group-flush List-group">

@@ -31,7 +31,7 @@ const Header = () => {
               Services
             </CustomLink>
             <CustomLink className="nav-link" to="/checkout">
-              Check Out
+              Checkout
             </CustomLink>
             <CustomLink className="nav-link" to="/blogs">
               Blogs

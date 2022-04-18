@@ -3,7 +3,7 @@ import React from "react";
 const WhyChooseMe = () => {
   return (
     <div className="container mt-50px pt-5 mb-5">
-      <h2 className="text-white fs-1 text-md-center">WHY PEOPLE CHOOSE US</h2>
+      <h2 className="text-white fs-1 text-md-center">WHY PEOPLE CHOOSE ME</h2>
       <p className="text-white fs-4 text-md-center">
         Our sport experts and latest sports equipment are the winning
         combination.

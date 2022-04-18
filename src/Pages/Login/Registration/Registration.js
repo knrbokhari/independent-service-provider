@@ -21,7 +21,7 @@ const Registration = () => {
 
   const verifiEmail = async () => {
     await sendEmailVerification(auth.currentUser);
-    toast("Verification email sent");
+    // toast("Verification email sent");
   };
 
   const handleRegistration = async (e) => {
@@ -44,8 +44,8 @@ const Registration = () => {
         if (user) {
           navigate(from, { replace: true });
         }
-        // console.log(user);
         verifiEmail();
+        alert("Verification email sent");
         emailRef.current.value = "";
         passwordRef.current.value = "";
         confirmPasswordRef.current.value = "";

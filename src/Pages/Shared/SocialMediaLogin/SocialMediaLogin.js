@@ -25,34 +25,29 @@ const SocialMediaLogin = () => {
     navigate(from, { replace: true });
   }
 
-  let handelError;
-  if (error1 || error2 || error3) {
-    handelError = (
-      <>
-        <p className="text-danger">
-          {error1 ? "" : error1.message}
-          {error2 ? "" : error2.message}
-          {error3 ? "" : error3.message}
-        </p>
-      </>
-    );
-  }
   return (
     <div>
-      {handelError}
-      <p className="text-danger">{error2?.message}</p>
+      <p className="text-danger text-center mt-2">
+        {error1 ? error1.message : ""}
+      </p>
       <button
         onClick={() => signInWithGoogle()}
         className="d-block w-100 fs-4 rounded-3 btns buttons"
       >
         Login With Google
       </button>
+      <p className="text-danger text-center mt-3">
+        {error3 ? error3.message : ""}
+      </p>
       <button
         onClick={() => signInWithFacebook()}
         className="d-block w-100 fs-4 rounded-3 btns buttons"
       >
         Login With Facebook
       </button>
+      <p className="text-danger text-center mt-3">
+        {error2 ? error2.message : ""}
+      </p>
       <button
         onClick={() => signInWithGithub()}
         className="d-block w-100 fs-4 rounded-3 btns buttons"
