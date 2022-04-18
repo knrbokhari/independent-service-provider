@@ -8,8 +8,11 @@ import auth from "../../firebase.init";
 import Loading from "../Shared/Loading/Loading";
 
 const Checkout = () => {
+  // get user from firebase
   const [user] = useAuthState(auth);
   // const [updateProfile, updating, error] = useUpdateProfile(auth);
+
+  // get input
   const displayNameRef = useRef("");
   const addressRef = useRef("");
   const phoneNumberRef = useRef("");

@@ -11,22 +11,28 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Registration = () => {
+  // get input
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const confirmPasswordRef = useRef("");
   const [error, setError] = useState("");
+
+  // navigate & location for from
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
+  // Email Verification
   const verifiEmail = async () => {
     await sendEmailVerification(auth.currentUser);
     // toast("Verification email sent");
   };
 
+  // Registration
   const handleRegistration = async (e) => {
     e.preventDefault();
 
+    // input value
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;

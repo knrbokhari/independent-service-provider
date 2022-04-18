@@ -7,7 +7,7 @@ Open [https://independent-service-prov-8136a.web.app/](https://independent-servi
 ### About website
 
 * You can login and Registration in our website.
-* we have desktop, tablet and mobile responsive.
+* We have desktop, tablet and mobile responsive.
 * We have  email, password based authorization system.
 * We have a link for Password reset.
 * We have a Send Email Verification.

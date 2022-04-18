@@ -9,7 +9,6 @@ function CustomLink({ children, to, ...props }) {
     <div>
       <Link
         style={{
-          //   borderBottom: match ? "3px solid #f36100" : "none",
           color: match ? "#f36100" : " #ffffff",
           fontWeight: match ? "600" : "400",
         }}

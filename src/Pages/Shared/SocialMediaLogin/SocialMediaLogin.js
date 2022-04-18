@@ -9,10 +9,13 @@ import auth from "../../../firebase.init";
 import Loading from "../Loading/Loading";
 
 const SocialMediaLogin = () => {
+  // react-firebase-hooks
   const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
   const [signInWithGithub, user2, loading2, error2] = useSignInWithGithub(auth);
   const [signInWithFacebook, user3, loading3, error3] =
     useSignInWithFacebook(auth);
+
+  // navigate & location for from
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -21,6 +24,7 @@ const SocialMediaLogin = () => {
   //   return <Loading></Loading>;
   // }
 
+  // user
   if (user1 || user2 || user3) {
     navigate(from, { replace: true });
   }

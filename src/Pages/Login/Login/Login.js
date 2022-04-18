@@ -13,17 +13,22 @@ import "./Login.css";
 import Loading from "../../Shared/Loading/Loading";
 
 const Login = () => {
+  // from react-firebase-hooks
   const [signInWithEmailAndPassword, user, loading, error1] =
     useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, sending, error2] =
     useSendPasswordResetEmail(auth);
+
+  // navigate & location for from
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
+  // get input
   const emailRef = useRef("");
   const passwordRef = useRef("");
 
+  // Error handle
   let handleError;
   if (error1 || error2) {
     handleError = (
@@ -33,15 +38,17 @@ const Login = () => {
       </>
     );
   }
-
+  // user
   if (user) {
     navigate(from, { replace: true });
   }
 
+  // loading
   if (loading || sending) {
     return <Loading></Loading>;
   }
 
+  // login
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -52,6 +59,7 @@ const Login = () => {
     passwordRef.current.value = "";
   };
 
+  //  reset Password
   const resetPassword = async () => {
     const email = emailRef.current.value;
     if (email) {
@@ -62,6 +70,7 @@ const Login = () => {
     }
     passwordRef.current.value = "";
   };
+
   return (
     <div className="container">
       <h2
