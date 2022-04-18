@@ -4,14 +4,16 @@ import {
 } from "firebase/auth";
 import React, { useRef, useState } from "react";
 import { Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialMediaLogin from "../../Shared/SocialMediaLogin/SocialMediaLogin";
 
 const Registration = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
+  const confirmPasswordRef = useRef("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const verifiEmail = async () => {
     await sendEmailVerification(auth.currentUser);
@@ -23,22 +25,33 @@ const Registration = () => {
 
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
+    const confirmPassword = confirmPasswordRef.current.value;
 
-    console.log(password.length);
-    if (password.length < 6) {
-      setError("give 6 or more words for password");
+    if (password !== confirmPassword) {
+      const error = "Password don't match";
+      passwordRef.current.value = "";
+      confirmPasswordRef.current.value = "";
+      return setError(error);
     }
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
+        if (user) {
+          navigate("/");
+        }
+        // console.log(user);
         verifiEmail();
+        emailRef.current.value = "";
+        passwordRef.current.value = "";
+        confirmPasswordRef.current.value = "";
+        setError("");
       })
       .catch((error) => {
-        console.error(error);
         setError(error?.message);
       });
   };
+
   return (
     <div>
       <h2
@@ -55,6 +68,7 @@ const Registration = () => {
               ref={emailRef}
               type="email"
               placeholder="Enter email"
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -63,9 +77,19 @@ const Registration = () => {
               ref={passwordRef}
               type="password"
               placeholder="Password"
+              required
             />
           </Form.Group>
-          <p className="text-danger">{error}</p>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Confirm Password</Form.Label>
+            <Form.Control
+              ref={confirmPasswordRef}
+              type="password"
+              placeholder="Confirm Password"
+              required
+            />
+          </Form.Group>
+          <p className="text-danger text-center m-0 fs-5">{error}</p>
           <p className="my-2 fs-4 text-white">
             Already have an account?{" "}
             <Link to="/login" className="text-decoration-none">
