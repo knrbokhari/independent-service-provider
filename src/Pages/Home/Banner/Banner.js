@@ -25,7 +25,7 @@ const Banner = () => {
         <Carousel.Item interval={500}>
           <img className="d-block w-100" src={bunnerImg2} alt="Second slide" />
           <Carousel.Caption>
-            <p>Shape your body</p>
+            <p>Join Us Now</p>
             <h3>
               Be <strong>strong</strong> <br /> traning hard
             </h3>
