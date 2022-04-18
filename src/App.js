@@ -14,7 +14,7 @@ import Checkout from "./Pages/Checkout/Checkout";
 
 function App() {
   return (
-    <div style={{ backgroundColor: "#151515" }}>
+    <div style={{ backgroundColor: "#1f2225" }}>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
